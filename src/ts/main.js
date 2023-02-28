@@ -1,7 +1,7 @@
 "use strict";
 var _a, _b, _c;
 Object.defineProperty(exports, "__esModule", { value: true });
-const functions_1 = require("./functions/functions");
+const functions_1 = require("./functions/functions.js");
 const menu = document.querySelector(".menu");
 const menuItems = document.querySelectorAll(".menuItem");
 const hamburger = document.querySelector(".hamburger");
