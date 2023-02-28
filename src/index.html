@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liatest</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Source+Serif+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../build/css/main.css" />
+    <script defer type="module" src="../src/ts/main.js"></script>
+</head>
+
+<body>
+    <div id="wrapper">
+        <nav class="navigation">
+
+            <ul class="menu">
+                <li><a class="menu__item" href="#"><img src="./assets/test-logga.svg" alt="logo" /></a></li>
+                <li><a class="menu__item" data-content="Produkter" href="#">Produkter</a></li>
+                <li><a class="menu__item" data-content="Om oss" href="#">Om oss</a></li>
+                <li><a class="menu__item" data-content="beställning" href="#">beställning</a></li>
+                <div class="menu__right">
+                    <li id="loggedOn" class="menu__item"></li>
+                    <li><button id="loginBtn" class="menu__item">Logga in</button></li>
+                </div>
+            </ul>
+            <button class="hamburger">
+                <i class="menuIcon material-icons">menu</i>
+                <i class="closeIcon material-icons">close</i>
+        </nav>
+        <main>
+            <div class="modal">
+                <div class="modal__content"><img class="modal__content--close" src="./assets/close-symbol.svg" />
+                    <h2 class="modal__content--heading">Logga in</h1>
+                        <form class="login">
+                            <label for="name"></label><br>
+                            <input type="text" id="login__name" name="name" placeholder="Namn"><br>
+                            <button id="logBtn" class="btn" type="button">Logga in</button>
+                            <p class="modal__para">Genom att logga in godkänner du <a class="modal__agreement"
+                                    href="#">våra villkor</a></p>
+                        </form>
+                </div>
+            </div>
+            <article class="main__article">
+                <p class="main__para">Ett nytt sätt att upptäcka</p>
+                <h1 class="main__heading">Silkeslena produkter med glansiga detaljer</h1>
+            </article>
+    </div>
+    </main>
+
+
+</body>
+
+</html>
