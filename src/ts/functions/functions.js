@@ -1,19 +1,13 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.login = exports.errMsg = exports.closeModal = exports.showModal = void 0;
-const showModal = (div) => {
+export const showModal = (div) => {
     div.style.display = "flex";
 };
-exports.showModal = showModal;
-const closeModal = (div) => {
+export const closeModal = (div) => {
     div.style.display = "none";
 };
-exports.closeModal = closeModal;
-const errMsg = (text, msg) => {
+export const errMsg = (text, msg) => {
     text.innerHTML = msg;
 };
-exports.errMsg = errMsg;
-const login = (userPlace, user) => {
+export const login = (userPlace, user) => {
     if (user.length < 1) {
         return false;
     }
@@ -29,7 +23,6 @@ const login = (userPlace, user) => {
         userPlace.innerHTML = userMsg;
     }
     sessionStorage.setItem(user, user);
-    (0, exports.closeModal)(document.querySelector(".modal"));
+    closeModal(document.querySelector(".modal"));
     return 1;
 };
-exports.login = login;

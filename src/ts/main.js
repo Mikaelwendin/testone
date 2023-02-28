@@ -1,7 +1,5 @@
-"use strict";
 var _a, _b, _c;
-Object.defineProperty(exports, "__esModule", { value: true });
-const functions_1 = require("./functions/functions.js");
+import { closeModal, errMsg, login, showModal } from "./functions/functions.js";
 const menu = document.querySelector(".menu");
 const menuItems = document.querySelectorAll(".menuItem");
 const hamburger = document.querySelector(".hamburger");
@@ -29,7 +27,7 @@ menuItems.forEach(function (menuItem) {
 });
 (_a = document.querySelector("#loginBtn")) === null || _a === void 0 ? void 0 : _a.addEventListener("click", () => {
     if (!isLoggedIn) {
-        (0, functions_1.showModal)(document.querySelector(".modal"));
+        showModal(document.querySelector(".modal"));
         msg.innerHTML = "Använd ditt namn för att logga in";
     }
     else {
@@ -40,16 +38,16 @@ menuItems.forEach(function (menuItem) {
 });
 (_b = document
     .querySelector(".modal__content--close")) === null || _b === void 0 ? void 0 : _b.addEventListener("click", () => {
-    (0, functions_1.closeModal)(document.querySelector(".modal"));
+    closeModal(document.querySelector(".modal"));
 });
 (_c = document.querySelector("#logBtn")) === null || _c === void 0 ? void 0 : _c.addEventListener("click", () => {
     let input = document.querySelector("input");
-    let loggedIn = (0, functions_1.login)(logText, input.value);
+    let loggedIn = login(logText, input.value);
     if (loggedIn) {
         logBtn.innerHTML = "Logga ut";
         isLoggedIn = true;
     }
     else {
-        (0, functions_1.errMsg)(msg, "Skriv ett namn med högst 15 tecken");
+        errMsg(msg, "Skriv ett namn med högst 15 tecken");
     }
 });
