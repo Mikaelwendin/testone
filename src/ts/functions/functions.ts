@@ -1,4 +1,4 @@
-/* export const showModal = (div: HTMLDivElement,) => {
+export const showModal = (div: HTMLDivElement,) => {
   div.style.display = "flex";
 };
 export const closeModal = (div: HTMLDivElement) => {
@@ -24,5 +24,5 @@ export const login = (userPlace: HTMLLIElement, user: string) => {
   sessionStorage.setItem(user, user);
   closeModal(document.querySelector(".modal") as HTMLDivElement);
   return 1;
-}; */
+};
 
