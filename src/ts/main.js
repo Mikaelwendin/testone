@@ -1,7 +1,5 @@
 "use strict";
 var _a, _b, _c;
-Object.defineProperty(exports, "__esModule", { value: true });
-import { showModal, closeModal, login, errMsg } from "./functions/functions.js";
 const menu = document.querySelector(".menu");
 const menuItems = document.querySelectorAll(".menuItem");
 const hamburger = document.querySelector(".hamburger");
@@ -29,7 +27,7 @@ menuItems.forEach(function (menuItem) {
 });
 (_a = document.querySelector("#loginBtn")) === null || _a === void 0 ? void 0 : _a.addEventListener("click", () => {
     if (!isLoggedIn) {
-        (0, showModal)(document.querySelector(".modal"));
+        showModal(document.querySelector(".modal"));
         msg.innerHTML = "Använd ditt namn för att logga in";
     }
     else {
@@ -40,16 +38,44 @@ menuItems.forEach(function (menuItem) {
 });
 (_b = document
     .querySelector(".modal__content--close")) === null || _b === void 0 ? void 0 : _b.addEventListener("click", () => {
-    (0, closeModal)(document.querySelector(".modal"));
+    closeModal(document.querySelector(".modal"));
 });
 (_c = document.querySelector("#logBtn")) === null || _c === void 0 ? void 0 : _c.addEventListener("click", () => {
     let input = document.querySelector("input");
-    let loggedIn = (0, login)(logText, input.value);
+    let loggedIn = login(logText, input.value);
     if (loggedIn) {
         logBtn.innerHTML = "Logga ut";
         isLoggedIn = true;
     }
     else {
-        (0, errMsg)(msg, "Skriv ett namn med högst 15 tecken");
+        errMsg(msg, "Skriv ett namn med högst 15 tecken");
     }
 });
+const showModal = (div) => {
+    div.style.display = "flex";
+};
+const closeModal = (div) => {
+    div.style.display = "none";
+};
+const errMsg = (text, msg) => {
+    text.innerHTML = msg;
+};
+const login = (userPlace, user) => {
+    if (user.length < 1) {
+        return false;
+    }
+    if (user.length > 15) {
+        return false;
+    }
+    if (sessionStorage.getItem(user) === user) {
+        let userMsg = "Välkommen tillbaka! Du är inloggad som <b>" + user + "</b>";
+        userPlace.innerHTML = userMsg;
+    }
+    else {
+        let userMsg = "Du är inloggad som " + user;
+        userPlace.innerHTML = userMsg;
+    }
+    sessionStorage.setItem(user, user);
+    closeModal(document.querySelector(".modal"));
+    return 1;
+};
