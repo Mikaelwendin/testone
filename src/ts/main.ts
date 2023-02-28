@@ -1,4 +1,4 @@
-import { closeModal, errMsg, login, showModal } from "./functions/functions";
+import { closeModal, errMsg, login, showModal } from "./functions";
 
 const menu = document.querySelector(".menu") as HTMLUListElement;
 const menuItems = document.querySelectorAll(".menuItem");
