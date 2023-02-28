@@ -1,5 +1,5 @@
 var _a, _b, _c;
-import { closeModal, errMsg, login, showModal } from "../functions/functions";
+import { closeModal, errMsg, login, showModal } from "/functions/functions";
 const menu = document.querySelector(".menu");
 const menuItems = document.querySelectorAll(".menuItem");
 const hamburger = document.querySelector(".hamburger");
