@@ -3,8 +3,6 @@
     "@parcel/transformer-sass": "^2.8.3",
     "parcel": "^2.8.3",
     "typescript": "^4.9.5"
-  },
-  "dependencies": {
-    "postcss-discard-duplicates": "^5.1.0"
   }
+
 }
