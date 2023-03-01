@@ -48,7 +48,6 @@ main .modal .modal__content {
   padding: 1rem 4rem;
   background-color: rgb(230, 226, 226);
   color: #000;
-  flex-direction: column;
 }
 main .modal .modal__content label {
   font-size: 1rem;
