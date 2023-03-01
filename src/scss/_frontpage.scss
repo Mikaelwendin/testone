@@ -49,7 +49,7 @@ main {
       padding:1rem 4rem;
       background-color: rgb(230, 226, 226);
       color: $primary;
-      flex-direction: column;
+      display: block;
       
       
       & label {
