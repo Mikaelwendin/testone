@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.login = exports.errMsg = exports.closeModal = exports.showModal = void 0;
 const showModal = (div) => {
-    div.style.display = "flex";
+    div.style.display = "block";
 };
 exports.showModal = showModal;
 const closeModal = (div) => {

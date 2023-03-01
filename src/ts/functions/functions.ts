@@ -1,5 +1,5 @@
 export const showModal = (div: HTMLDivElement,) => {
-  div.style.display = "flex";
+  div.style.display = "block";
 };
 export const closeModal = (div: HTMLDivElement) => {
   div.style.display = "none";
