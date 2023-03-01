@@ -105,7 +105,6 @@ nav {
       }
       
       @include mixins.for-size(desktop) {
-        display: flex;
         flex-direction: row;
         margin-left: auto;
         padding-right: 5%;
